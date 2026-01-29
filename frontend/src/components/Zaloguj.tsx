@@ -15,7 +15,7 @@ export interface User {
 export const Zaloguj = () => {
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     try {
-      const response = await fetch("/api/create-client", {
+       const response = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
