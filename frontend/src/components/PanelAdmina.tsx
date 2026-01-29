@@ -7,14 +7,11 @@ export const PanelAdmina = () => {
   const [totalReservations, setTotalReservations] = useState<
     number | undefined
   >(undefined);
-  const {
-    data: reservations,
-    isLoading,
-    error,
-  } = useQuery({
+    const { data: reservations } = useQuery({
     queryKey: ["list_reservations"],
     queryFn: listReservations,
   });
+
   const columns = [
     {
       title: "ID",

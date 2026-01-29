@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Table, Button } from "antd";
 export const Rezerwacje = ({ user }: { user: User | null }) => {
   if (user === null) return;
-  const { data, isLoading, error } = useQuery({
+  const { data } = useQuery({
     queryKey: ["reservations", user.email],
     queryFn: () => getReservations({ user_email: user.email }),
     refetchInterval: 1000,
