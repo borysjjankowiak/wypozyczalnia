@@ -19,7 +19,7 @@ interface RejestracjaProps {
 export const Rejestracja = ({ setSelectedView }: RejestracjaProps) => {
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     try {
-      const response = await fetch("http://localhost:8000/create-client", {
+      const response = await fetch("/api/create-client", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
