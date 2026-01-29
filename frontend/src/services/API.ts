@@ -22,7 +22,7 @@ export interface ReservationsProps {
   end_date: string;
 }
 export const api = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "/api",
 });
 
 export const getBikes = async (): Promise<Bike[]> => {
